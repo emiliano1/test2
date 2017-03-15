@@ -1,0 +1,40 @@
+<!-- Modal HTML -->
+<div id="lanch_calculater" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Calculator</h4>
+            </div>
+            <div class="modal-body">
+            	<%= form_for :product , :url=>product_calculate_path, :remote=>true do |f| %>
+                    <div class="col-md-6">  
+                      <div class="form-group">
+                        <%=f.label :length%>
+                        <%= f.text_field :length ,:class=>"form-control"%>
+                      </div>
+                      <div class="form-group">
+                        <%=f.label :width%>
+                        <%= f.text_field :width ,:class=>"form-control"%>
+                      </div>
+                    </div>
+                    <div class="col-md-6">  
+                      <div class="form-group">
+                        <%=f.label :height%>
+                        <%= f.text_field :height ,:class=>"form-control"%>
+                      </div>
+    		          <div class="form-group">
+    		            <%=f.label :weight%>
+    		            <%= f.text_field :weight ,:class=>"form-control"%>
+    		          </div>
+                    </div>
+		          <%= f.submit "Caculate" ,:class=>"btn btn-primary"%>
+		        <% end %>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

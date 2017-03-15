@@ -1,0 +1,5 @@
+var product_name =  "<%= @product.pluck(:name) %>";
+$("#lanch_calculater .modal-body").html(product_name.replace(/[\[\]']+/g,''));
+setInterval(function() {
+	$("#lanch_calculater").modal("hide")
+}, 5000); 
